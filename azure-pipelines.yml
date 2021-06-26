@@ -40,6 +40,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+          additionalImageTags: 'latest'
 
     - task: CopyPublishBuildArtifacts@1
       inputs:
