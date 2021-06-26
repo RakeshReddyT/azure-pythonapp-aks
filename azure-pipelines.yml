@@ -41,8 +41,11 @@ stages:
         tags: |
           $(tag)
 
-    - upload: manifests
-      artifact: manifests
+    - task: CopyPublishBuildArtifacts@1
+      inputs:
+        Contents: 'azure-aks.yaml'
+        ArtifactName: 'manifests'
+        ArtifactType: 'Container'
 
 - stage: Deploy
   displayName: Deploy stage
