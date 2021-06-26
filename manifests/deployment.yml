@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pythonappaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pythonappaks
+  template:
+    metadata:
+      labels:
+        app: pythonappaks 
+    spec:
+      containers:
+        - name: pythonappaks 
+          image: k8sdemomj.azurecr.io/pythonappaks
+          ports:
+          - containerPort: 5000
