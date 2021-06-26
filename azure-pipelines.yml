@@ -73,8 +73,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/service.yaml
-                $(Pipeline.Workspace)/manifests/deployment.yaml
+                $(Pipeline.Workspace)/manifests/azure-aks.yaml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
