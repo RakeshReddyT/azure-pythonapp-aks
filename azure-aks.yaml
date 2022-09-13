@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-python-app
-        image: k8sdemomj.azurecr.io/pythonappaks:latest
+        image: crnew.azurecr.io/pythonappaks:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
