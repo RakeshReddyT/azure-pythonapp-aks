@@ -31,7 +31,7 @@ stages:
 
     - task: SonarQubePrepare@5
       inputs:
-        SonarQube: 'kubernetes'
+        SonarQube: 'sonar'
         scannerMode: 'CLI'
         configMode: 'manual'
         cliProjectKey: 'kubernetes_kubernetes'
